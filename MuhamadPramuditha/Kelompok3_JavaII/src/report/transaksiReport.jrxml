@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="transaksiReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12345678-abcd-1234-abcd-1234567890ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT ID, SERVER, REGION, DIAMOND, RANK, METODE_PEMBAYARAN FROM topupml]]>
+	</queryString>
+	<field name="ID" class="java.lang.String"/>
+	<field name="SERVER" class="java.lang.String"/>
+	<field name="REGION" class="java.lang.String"/>
+	<field name="DIAMOND" class="java.lang.String"/>
+	<field name="RANK" class="java.lang.String"/>
+	<field name="METODE_PEMBAYARAN" class="java.lang.String"/>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="30" uuid="e3972477-1f49-4d49-88f8-b5c611c58c47"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Transaksi TopUp ML]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="90" height="20" uuid="4977e2a2-7c60-472d-aca8-9d737aa71eb6"/>
+				<textFieldExpression><![CDATA["ID"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="80" height="20" uuid="dea959e3-5a07-459d-a14e-b8152839bd2b"/>
+				<textFieldExpression><![CDATA["SERVER"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="80" height="20" uuid="c42fc187-56f4-443d-8ca9-d103393f9226"/>
+				<textFieldExpression><![CDATA["REGION"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="80" height="20" uuid="1394fbc9-84e6-4acf-bc15-f0d3a3abcd30"/>
+				<textFieldExpression><![CDATA["DIAMOND"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="80" height="20" uuid="efd87ce4-9dfb-4b22-ba18-e5f392c1db3d"/>
+				<textFieldExpression><![CDATA["RANK"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="145" height="20" uuid="d4094481-6e91-4b8e-99ff-70c4ff11ff3f"/>
+				<textFieldExpression><![CDATA["METODE"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="90" height="20" uuid="71fbf6b9-0cf3-44b2-a952-2f2e0a4f08f7"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="80" height="20" uuid="4b8bd6b5-d0b7-45cc-a298-cb3d5c6b73b5"/>
+				<textFieldExpression><![CDATA[$F{SERVER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="80" height="20" uuid="d626cf9d-2e13-4740-873b-dbfa7f95b95d"/>
+				<textFieldExpression><![CDATA[$F{REGION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="80" height="20" uuid="017a5559-9748-4146-bb11-cad9f8e35ad3"/>
+				<textFieldExpression><![CDATA[$F{DIAMOND}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="80" height="20" uuid="f4284ec8-9697-42cf-8afb-cc2700b1122a"/>
+				<textFieldExpression><![CDATA[$F{RANK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="145" height="20" uuid="a6b0908b-c8a5-4182-8ed2-7826fe01d3da"/>
+				<textFieldExpression><![CDATA[$F{METODE_PEMBAYARAN}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
